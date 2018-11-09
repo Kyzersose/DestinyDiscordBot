@@ -1,19 +1,22 @@
 import discord
 import asyncio
+import apikeys
 
 # VARIABLES
-TOKEN = 'PLACE YOUR BOT TOKEN HERE'
+TOKEN = apikeys.TOKEN
 actuallyString = 'Actually, there are only 4 commands:\n\n!actually:\tthis stupid menu\n!ping:\tthe only game I\'ll play without crying about it\n!why:\twant to know why you made me leave?!\n!bye:\twhere\'s Kyzer?\n\nThat\'s all from me.\nRon\'s the devil.\n-Solt'
 whyRecoil = 'https://youtu.be/SwYN7mTi6HM \nI hope this helps Recoil. :smirk:'
 whyRon = 'For the last time.\nI AM NOT ONE OF Jack\'s BOTS!!!\nI\'m a real boy!\n(╯°□°）╯︵ ┻━┻'
 whyBacon = 'You\'re response to any problem is......TITAN SMASH!!!\nAnd it freakin works!?\nBungie should nerf everything I\'m not currently exploiting!'
 whyShooter = 'I had finally found a team of capable Destiny players that COULD RAID!\n................and then you stopped playing Warframe.'
-whyIron = 'The Houton Texans are the one true team. The Cowboys couldn\'t beat their cheerleaders!'
+whyIron = 'The Houston Texans are the one true team. The Cowboys couldn\'t beat their cheerleaders!'
 whyAndy = 'You\'re clearly Canadian. No one is this nice or positive. You are the bizarro Solt.'
 whyBama = 'The name changes were too much. I hate you for it.'
 whyWrexsy = 'You took me to the top of the mountain and then never spoke to me again. You said I was special!'
 whyKyzer = 'JUDAS! You did this to me! Why did you me bring into this house of lies!?'
+whySalacious = 'Were the first 80 Salacious taken?! I find your lack of Power Level disturbing.....kinderguardian.'
 goodbyeKyzer = 'I\'ve been called away. No more room for Destiny. Super sad about it. Really miss you guys. Feel free to drop by and say hey.\n\n-KyzerSose\n\nmatt@theshaeffers.com\nwww.facebook.com/matt.shaeffer.946\nwww.theshaeffers.com\nhttps://gph.is/2lrUcQ2'
+
 
 ## Instantiates a new discord class object
 client = discord.Client()
@@ -45,7 +48,7 @@ async def on_message(message):
     elif message.content.startswith('!why'):
         senderAuthor = message.author
         if str(message.author) == 'KyzerSose#6270':
-            await client.send_message(message.channel, whyKyzer)
+            await client.send_message(message.channel, whySalacious)
         elif str(senderAuthor) == 'AndyBars#3465':
             await client.send_message(message.channel, whyAndy)
         elif str(senderAuthor) == 'B A M A ROLLTD#6664':
@@ -62,6 +65,8 @@ async def on_message(message):
             await client.send_message(message.channel, whyShooter)
         elif str(senderAuthor) == 'recoilhk#5303':
             await client.send_message(message.channel, whyRecoil)
+        elif str(senderAuthor) == 'harry potter#3322':
+            await client.send_message(message.channel, whySalacious)
         else:
             await client.send_message(message.channel, 'I don\'t know you yet. But I\'m sure I hate you.')
 
